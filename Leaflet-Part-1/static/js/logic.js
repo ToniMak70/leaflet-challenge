@@ -29,7 +29,34 @@ function createFeatures(earthquakeData) {
   // Give each feature a popup that describes the place, magnitude, and depth of the earthquake.
   function onEachFeature(feature, layer) {
     layer.bindPopup(`<h3>${feature.properties.place}</h3><hr><p>Magnitude: ${feature.properties.mag}</p><p>Depth: ${feature.geometry.coordinates[2]}</p>`);
-  }
+    // Add hover effect: on mouse over and mouse out
+  layer.on({
+    mouseover: function(event) {
+      var layer = event.target;
+      layer.setStyle({
+        weight: 3, // Increase the border weight on hover
+        color: "#ff0000", // Change border color to red
+        fillOpacity: 0.9 // Increase fill opacity on hover
+      });
+      // Bring the marker to the front on hover
+      layer.bringToFront();
+      // Open the popup when the user hovers over the marker
+      layer.openPopup();
+    },
+    mouseout: function(event) {
+      var layer = event.target;
+      layer.setStyle({
+        weight: 1, // Reset the border weight
+        color: "#000", // Reset border color
+        fillOpacity: 0.8 // Reset fill opacity
+      });
+      // Send the marker back to its original position
+      layer.bringToBack();
+     // Close the popup when the user moves away from the marker
+     layer.closePopup();
+    }
+  });
+}
 
   // Create a GeoJSON layer that contains the features array on the earthquakeData object.
   let earthquakes = L.geoJSON(earthquakeData, {
