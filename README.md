@@ -13,7 +13,7 @@ Legend: A color-coded legend is included to provide context for earthquake depth
 
 # Setup Instructions
 1. Clone the Repository
-To get started, clone this repository to your local machine: git clone https://github.com/your-username/leaflet-challenge.git
+To get started, clone this repository to your local machine: git clone https://github.com/ToniMak70/leaflet-challenge.git
 
 2. Install Required Libraries
 This project uses Leaflet.js to display the map. Ensure that you have an internet connection, as the project links to CDN versions of Leaflet for the map.
