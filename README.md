@@ -2,6 +2,9 @@
 # Earthquake Visualization with Leaflet
 This project uses the Leaflet JavaScript library to visualize earthquake data sourced from the USGS (United States Geological Survey). The goal of this visualization is to display real-time earthquake data on a map, with markers that reflect the magnitude and depth of the earthquakes. The map also includes popups with additional earthquake details and a legend for context.
 
+![2-BasicMap](https://github.com/user-attachments/assets/d520a701-2950-480f-959a-2ad3a7318bd6)
+
+
 # Features
 Interactive Map: Earthquakes are plotted on the map using Leaflet, with markers corresponding to their geographical coordinates (latitude, longitude).
 Magnitude and Depth Representation: Marker size reflects the magnitude of the earthquake, while color indicates its depth.
