@@ -1,0 +1,18 @@
+/* General styles for the page */
+body {
+  padding: 0;
+  margin: 0;
+}
+
+#map,
+body,
+html {
+  height: 100%;
+}
+
+/* CSS for the legend squares */
+.info.legend i {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+}
